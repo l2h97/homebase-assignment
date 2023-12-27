@@ -1,0 +1,45 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json --files src/index.ts",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:prod": "pm2 start ecosystem.config.json --watch",
+    "start:prod:container": "pm2-runtime start ecosystem.config.json --watch",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.7.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "pm2": "^5.3.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^5.0.5",
+    "typedi": "^0.10.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.8.2",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prisma": "^5.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

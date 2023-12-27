@@ -1,0 +1,11 @@
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "ignore": ["src/**/*.spec.ts"],
+  "events": {
+    "start": "clear"
+  },
+  "execMap": {
+    "ts": "tsc && ts-node"
+  }
+}
